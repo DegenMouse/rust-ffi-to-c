@@ -111,7 +111,7 @@ And now we can use Cargo to build both the C and Rust code and run the program:
 
 - From [Rust 1.64.0](https://blog.rust-lang.org/2022/09/22/Rust-1.64.0.html#c-compatible-ffi-types-in-core-and-alloc) it is now recommended to use `core::ffi` instead of `std::os::raw` to access C types. The latter is now an alias to types in the `core::ffi` module. `core` is also available in places where the Rust standard library (`std`) is not, like [embedded projects](https://docs.rust-embedded.org/book/intro/no-std.html).
 
-- Mapping out functions manully using `extern` is fine for small projects, but as soon as you are dealing with a bigger library or codebase, you want to take a look at `bindgen`. It can automatically generate the bindings for C or C++ libraries, making using them in Rust a lot easier. See [the `bindgen` User Guide](https://rust-lang.github.io/rust-bindgen/).
+- Mapping out functions manually using `extern` is fine for small projects, but as soon as you are dealing with a bigger library or codebase, you want to take a look at `bindgen`. It can automatically generate the bindings for C or C++ libraries, making using them in Rust a lot easier. See [the `bindgen` User Guide](https://rust-lang.github.io/rust-bindgen/).
 
 - We can control how our code is linked using the [`#[link()]` attribute.](https://doc.rust-lang.org/reference/items/external-blocks.html#the-link-attribute). It allows us to specify or rename functions and change the type of linking to use, eg. to static:
 
